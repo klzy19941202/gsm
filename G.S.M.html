@@ -64,11 +64,13 @@
     height: 2em;
     overflow: hidden;
     line-height: 2em;
+    font-size: 14px;
 	}
+
 	#navbar {
     height: 40px;
-    margin-top: 30px;
-    text-align: center;
+    margin-top: 25px;
+    text-align: left;
     padding: 0;
 	}
 	#navbar ul {
@@ -76,6 +78,11 @@
     list-style: none;
     padding-left: 0;
 	}
+    #navbar li {
+    margin-top: 10px;
+    list-style: none;
+	}
+
 	#navbar ul li:hover a{
     text-decoration: none;
 	}
@@ -255,6 +262,9 @@
 	#corp-carousel a:hover{
 		color: #fad694; 
 	}
+	/*#carousel-inner{
+		 position: center;
+	}*/
 	.pane-carousel .carousel-control.left {
     background: rgba(0,0,0,0);
     left: -9%;
@@ -352,7 +362,6 @@
 	#footer .link {
     border-width: 0px;
     border-left-width: 1px;
-    border-style: solid;
     border-color: rgba(255,255,255,0.2);
     padding: 0 15px;
 	}
@@ -361,16 +370,58 @@
     text-align: right;
     padding: 0px;
 	}
+	#logo{
+        font-size: 40px;
+        font-family:Georgia,"Times New Roman",Serif;
+        margin-top: 10px;
+        text-indent: 70px;
+        text-align: left;
+    }
+    #biaoqian{
+        color: #fad694;
+        font-size: 14px;
+        text-align: left;
+        text-indent: 20px;
+    }
+    #img{
+    	height: 300px;
+    	width: 600px;
+        display:block; 
+        margin:100px auto;
+    }
+    #bsf{
+    	height: 110px;
+    	width: 200px;
+        display:block; 
+        margin:20px auto;
+    }
+    .picture-box{
+        display:block;
+    }
+
+    .xyt{
+    	height: 130px;
+    	width: 200px;
+        display:block; 
+        margin:20px auto;
+    }
+
+    .border{
+
+             margin:0px auto;
+             height: 20px;
+    	     width: 180px;
+    }
 	</style>
 </head>
 <body>
 	<div class="container">
 		<div id="header" class="row">
-			<div id="logo" class="col-md-2 col-sm-3 text-hide">
-				G.S.M
-
+			<div id="logo" class="col-md-4 col-sm-3 ">
+				G.S.M 
+				  <div class="col-sm-8" id="biaoqian">Ars Longa.Vita brevis.传艺永恒</div>
 			</div>
-			<div id="navbar" class="col-md-8 col-sm-9 col-md-offset-2">
+			<div id="navbar" class="col-md-7 col-sm-9 col-md-offset-1">
 				<ul class="row">
 					<li id="menu-home" class="tab col-sm-2">
 						<a aria-expanded="false" class="col-sm-12" href="#home" data-toggle="tab">
@@ -384,7 +435,7 @@
 					</li>
 					<li id="menu-service" class="tab col-sm-2">
 						<a aria-expanded="false" class="col-sm-12" href="#service" data-toggle="tab">
-							<span class="text-nowrap">案例•服务</span>
+							<span class="text-nowrap">案例与服务</span>
 						</a>
 					</li>
 					<li id="menu-gebaude" class="tab col-sm-2">
@@ -536,13 +587,13 @@
 							<div id="customer-carousel" class="pane-carousel carousel slide" data-ride="carousel">
 								<!-- Wrapper for slides -->
 								<div class="carousel-inner" role="listbox">
-									<div class="item active text-center">
-										<img src="#" alt="图片未加载">
+									<div class="item active ">
+										<img src="img/customer-list1.png" alt="图片未加载" id="img">
 										<div class="carousel-caption">
 										</div>
 									</div>
-									<div class="item text-center">
-										<img src="#" alt="图片未加载">
+									<div class="item ">
+										<img src="img/customer-list2.png" alt="图片未加载" id="img">
 										<div class="carousel-caption">
 										</div>
 									</div>
@@ -608,36 +659,35 @@
 									<div class="border">
 										<a href="#business-environment" data-toggle="tab">
 											<img src="img/gs-1.jpg">
-											<div class="text">Smart rendering</div>
+											<div class="text">空气净化</div>
 										</a>
 									</div>
 								</div>
 								<div class="picture-box col-sm-3">
 									<div class="border">
 										<a href="#home-environment" data-toggle="tab">
-											<img src="img/gs-1.jpg">
-											<div class="text">Smart rendering</div>
+											<img src="img/gs-2.jpg">
+											<div class="text">水质净化</div>
 										</a>
 									</div>
 								</div>
 								<div class="picture-box col-sm-3">
 									<div class="border">
 										<a href="#business-environment" data-toggle="tab">
-											<img src="img/gs-1.jpg">
-											<div class="text">Smart rendering</div>
+											<img src="img/gs-3.jpg">
+											<div class="text">节能减排</div>
 										</a>
 									</div>
 								</div>
 								<div class="picture-box col-sm-3">
 									<div class="border">
 										<a href="#home-environment" data-toggle="tab">
-											<img src="img/gs-1.jpg">
-											<div class="text">Smart rendering</div>
+											<img src="img/gs-4.jpg">
+											<div class="text">温湿控制</div>
 										</a>
 									</div>
 								</div>
 							</div>
-							<button class="pull-right">详细智慧环保</button>
 						</div>
 						<div id="green-corp" class="tab-pane fade pane-content">
 							<div id="corp-carousel" class="pane-carousel carousel slide" data-ride="carousel">
@@ -647,7 +697,7 @@
 										<div class="carousel-caption">
 											<div class="row">
 												<div class="col-sm-3">
-													<div class="corp-brand"><img src="img/green/basf.jpg"></div>
+													<div class="corp-brand"><img src="img/basf.jpg" id="bsf"></div>
 												</div>
 												<div class="col-sm-9">
 													<h3>巴斯夫（BASF）</h3>
@@ -656,11 +706,11 @@
 											</div>
 											<div class="row">
 												<div class="clearline"></div>
-												<div class="col-sm-12 p-botton"><h2>产品展示</h2></div>
+												<div class="col-sm-10 p-botton col-sm-offset-1"><h2>产品展示</h2></div>
 
 												<div class="picture-box col-sm-3">
 													<div class="border no-action">
-														<img src="img/basf-2.jpg">
+														<img src="img/basf-1.jpg">
 														<div class="text">Kauropal® 粘合剂</div>
 													</div>
 												</div>
@@ -672,13 +722,13 @@
 												</div>
 												<div class="picture-box col-sm-3">
 													<div class="border no-action">
-														<img src="img/basf-2.jpg">
+														<img src="img/basf-3.jpg">
 														<div class="text">Microlith® 颜料</div>
 													</div>
 												</div>
 												<div class="picture-box col-sm-3">
 													<div class="border no-action">
-														<img src="img/basf-2.jpg">
+														<img src="img/basf-4.jpg">
 														<div class="text">CosyPUR® 泡沫</div>
 													</div>
 												</div>
@@ -689,7 +739,7 @@
 										<div class="carousel-caption">
 											<div class="row">
 												<div class="col-sm-3">
-													<div class="corp-brand"><img src="img/green/GSM.jpg"></div>
+													<div class="corp-brand"><img src="img/GSM.jpg" class="xyt"></div>
 												</div>
 												<div class="col-sm-9">
 													<h3>G.S.M 3D 吸音体（3D Cubic Panels）</h3>
@@ -698,29 +748,29 @@
 											</div>
 											<div class="row">
 												<div class="clearline"></div>
-												<div class="col-sm-12 p-botton"><h2>产品展示</h2></div>
+												<div class="col-sm-10 p-botton col-sm-offset-1 "><h2>产品展示</h2></div>
 
 												<div class="picture-box col-sm-3">
 													<div class="border no-action">
-														<img src="img/basf-2.jpg">
+														<img src="img/GSM-1.jpg">
 														<div class="text">3D吸音-古树</div>
 													</div>
 												</div>
 												<div class="picture-box col-sm-3">
 													<div class="border no-action">
-														<img src="img/basf-2.jpg">
+														<img src="img/GSM-2.jpg">
 														<div class="text">3D吸音-陨石</div>
 													</div>
 												</div>
 												<div class="picture-box col-sm-3">
 													<div class="border no-action">
-														<img src="img/basf-2.jpg">
+														<img src="img/GSM-3.jpg">
 														<div class="text">3D吸音-水立方</div>
 													</div>
 												</div>
 												<div class="picture-box col-sm-3">
 													<div class="border no-action">
-														<img src="img/basf-2.jpg">
+														<img src="img/GSM-4.jpg">
 														<div class="text">3D吸音-键盘</div>
 													</div>
 												</div>
@@ -751,6 +801,7 @@
 				<a class="social-icon fa fa-qq" href="#"></a>
 				<a class="social-icon fa fa-tencent-weibo" href="#"></a>
 			</div>
+
 			<div id="ft-lnks" class="col-md-8 col-md-offset-1 col-sm-10">
 				<div class="row">
 					<a id="link-intro" class="link" href="#company-intro">公司介绍</a>
@@ -761,7 +812,7 @@
 					<a class="link" href="#">G.S.M 邮件</a>
 				</div>
 			</div>
-			<div id="copyright" class="col-sm-6 col-sm-offset-6">版权所有 ©2000-2016 G.S.M（北京）有限公司</div>
+			<div id="copyright" class="col-sm-6 col-sm-offset-5">版权所有 ©2000-2016 G.S.M（北京）有限公司</div>
 		</div>
 	</div>
 
