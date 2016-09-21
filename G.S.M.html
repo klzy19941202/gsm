@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="title" content="">
+	<!--meta name="viewport" content="width=device-width, initial-scale=1"-->
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="robots" content="index, follow">
+
+	<!-- Bootstrap css -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+
+	<!-- Bootstrap theme -->
+	<!-- <link rel="stylesheet" href="css/bootstrap-theme.min.css"> -->
+
+	<!-- fontawesome css -->
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+
+	<!-- customized css -->
+	<!-- <link rel="stylesheet" href="css/yr.css"> -->
+
+	<style type="text/css">
+	html, body {
+	height: 100%;
+	color: #fad694;
+	font-family: Arial, 'Microsoft YaHei', 'STHeiti';
+	}
+	body {
+    background-image: url(img/bg-home.jpg);
+    background-position: top center;
+    background-color: #222;
+    background-repeat: no-repeat;
+    overflow: auto;
+	}
+	.row{
+		margin: 0 -15px;
+	}
+	a,a:hover,a:focus {
+    color: #fad694;
+	}
+	button, input, select, textarea {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    margin: 0;
+	color: inherit;
+	}
+	/*header*/
+	#logo{
+		height: 100px;
+	}	
+	.text-hide {
+    font: 0/0 a;
+    color: transparent;
+    text-shadow: none;
+    background-color: transparent;
+    border: 0;
+    }
+    .tab {
+    height: 2em;
+    overflow: hidden;
+    line-height: 2em;
+	}
+	#navbar {
+    height: 40px;
+    margin-top: 30px;
+    text-align: center;
+    padding: 0;
+	}
+	#navbar ul {
+    margin-bottom: 0px;
+    list-style: none;
+    padding-left: 0;
+	}
+	#navbar ul li:hover a{
+    text-decoration: none;
+	}
+/*	#navbar ul li a,#navbar ul li a:hover,#navbar ul li a:focus{
+		color: #fad694;
+		background-color: transparent;
+	}*/
+	#underline {
+    top: 2px;
+    left: 0px;
+	}
+	/*content*/
+	.pane {
+    height: 600px;
+    width: 100%;
+	background-color: rgba(0,0,0,0.4);
+	}
+	.pane div {
+    height: 100%;
+	}
+	.link-group{
+		padding: 0;
+		background-color: rgba(0,0,0,0.2);
+	}
+	.link-group ul {
+    list-style: none;
+    padding-left: 0;
+	}
+	.group-item a {
+    display: block;
+    padding: 20px 0px;
+    text-align: center;
+    color: #776648;
+	}
+	.group-item.active a[data-toggle="tab"], .group-item:hover a {
+    background-color: rgba(255,255,255,0.1);
+    color: #fad694;
+    text-decoration: none;
+	}
+	/*content right*/
+	.pane div {
+    height: 100%;
+	}
+	.pane .tab-content {
+    padding: 2% 5%;
+    /*background: rgba(0,0,0,0.2);*/
+	}
+	.fade.in {
+    opacity: 1;
+	}
+	h1 {
+    font-size: 2em;
+    color: #776648;
+    margin-bottom: 1em;
+	}
+	h2 {
+    font-size: 1.4em;
+    color: #776648;
+	}
+	p {
+    font-size: 1em;
+    margin: 0.5em 0 0.5em;
+    padding: 0.5em 0 0.5em;
+    line-height: 1.5em;
+	}
+	samp {
+    font-size: 1.2em;
+    font-family: Arial, 'KaiTi', 'STKaiti';
+	}
+	p span {
+    color: #776648;
+	}
+	.dropdown {
+    cursor: pointer;
+	}
+	.cs-selectbox div:first-child {
+    width: 100%;
+    border: 1px solid;
+    border-radius: 3px;
+    padding: 5px 10px;
+    color: #776648;
+    text-align: center;
+	}
+	/*在线客服*/
+	.cs-selectbox .dropdown-menu {
+    min-width: 100%;
+    margin-top: -1px;
+    border: 1px solid;
+    border-top: 0px;
+    border-top-right-radius: 0px;
+    border-top-left-radius: 0px;
+	}
+	.dropdown-menu {
+	background-color: #111;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    display: none;
+    float: left;
+    min-width: 160px;
+    padding:  0;
+    margin: 2px 0 0;
+    font-size: 14px;
+    text-align: left;
+    list-style: none;
+    background-color: #fff;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border: 1px solid #ccc;
+    border: 1px solid rgba(0,0,0,.15);
+    border-radius: 4px;
+    -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+    box-shadow: 0 6px 12px rgba(0,0,0,.175);
+	}
+	.dropdown-menu li{
+		background-color: #111;
+	}
+	.dropdown-menu li a {
+    color: #fad694;
+    text-align: center;
+	}
+	.dropdown-menu > li > a {
+    display: block;
+    padding: 3px 20px;
+    clear: both;
+    font-weight: 400;
+    line-height: 1.42857143;
+    color: #333;
+    white-space: nowrap;
+	}
+	.dropdown-menu li a:hover {
+    background-color: rgba(255,255,255,0.05);
+    background-image: none;
+    color: #fad694;
+    text-decoration: none;
+	}
+	#cs-form .row {
+    margin-top: 15px;
+	}
+	.cs-input {
+    border: 1px solid;
+    border-radius: 3px;
+    color: #776648;
+    background-color: rgba(0,0,0,0);
+	}
+	textarea {
+    overflow: auto;
+	}
+	#cs-detail {
+    width: 100%;
+	}
+	.cs-radio {
+    margin-left: 10px !important;
+    margin-right: 5px !important;
+	}
+	.clearline {
+    height: 1px !important;
+    background-color: rgba(200,200,200,0.2);
+	}
+	#cs-form #submit {
+    background-color: #fad694;
+    border-color: #fad694;
+    border-style: none;
+    border-radius: 3px;
+    color: #222;
+    font-size: 1em;
+    line-height: 2em;
+    width: 100px;
+	}
+	.text-center{
+	padding-top: 270px;
+	}
+	#customer-carousel a:hover{
+		color: #fad694; 
+	}
+	#corp-carousel a:hover{
+		color: #fad694; 
+	}
+	.pane-carousel .carousel-control.left {
+    background: rgba(0,0,0,0);
+    left: -9%;
+	}
+	.pane-carousel .carousel-control.right {
+    background: rgba(0,0,0,0);
+    right: -9%;
+	}
+	#green-smart .row{
+		height: 230px;
+		padding-top: 43px;
+	}
+	.picture-box img {
+    width: 100%;
+    height: auto;
+	}
+	.picture-box .border {
+    border: 1px solid;
+    color: #776648;
+    cursor: pointer;
+	}
+	.picture-box div {
+    height: auto;
+	}
+	.picture-box a {
+    text-decoration: none;
+	}
+	img {
+    vertical-align: middle;
+	}
+	.picture-box .text {
+    width: 100%;
+    text-align: center;
+    background-color: rgba(16,16,16,0.6);
+    padding: 0.5em;
+    color: #eee;
+	}
+	#green-smart>button{
+		background-color: rgba(0,0,0,0.5);
+		border: 1px solid #776648;
+		padding: 5px 25px;
+		margin-top: 30px;
+	}
+	/*绿色材料*/
+	.pane-carousel .carousel-caption {
+    width: 100%;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    text-align: left;
+	}
+	#green-corp .carousel-caption .row {
+    height: 40%;
+    padding: 5% 0;
+	}
+	.pane-carousel .carousel-caption {
+    text-align: left;
+	}
+	#corp-carousel .p-botton {
+    margin-bottom: 0.5em;
+    padding-bottom: 0.5em;
+	}
+	\.pane-carousel .carousel-control {
+    width: 9%;
+	}
+	/*footer*/
+	#footer {
+    padding: 20px 0;
+	}
+	.social-icon {
+    margin: 0 2px;
+    width: 20px;
+    height: 20px;
+    background-color: #fad694;
+    color: #222;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 20px;
+    font-size: 16px;
+    border-radius: 10px;
+	}
+	.fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    padding-top: 2px;
+	}
+	#ft-lnks {
+    text-align: right;
+	}
+	#footer .link {
+    border-width: 0px;
+    border-left-width: 1px;
+    border-style: solid;
+    border-color: rgba(255,255,255,0.2);
+    padding: 0 15px;
+	}
+	#copyright {
+    margin-top: 15px;
+    text-align: right;
+    padding: 0px;
+	}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div id="header" class="row">
+			<div id="logo" class="col-md-2 col-sm-3 text-hide">
+				G.S.M
+
+			</div>
+			<div id="navbar" class="col-md-8 col-sm-9 col-md-offset-2">
+				<ul class="row">
+					<li id="menu-home" class="tab col-sm-2">
+						<a aria-expanded="false" class="col-sm-12" href="#home" data-toggle="tab">
+							<span>首页</span>
+						</a>
+					</li>
+					<li id="menu-intro" class="tab col-sm-2 active">
+						<a aria-expanded="true" class="col-sm-12" href="#intro" data-toggle="tab">
+							<span>公司介绍</span>
+						</a>
+					</li>
+					<li id="menu-service" class="tab col-sm-2">
+						<a aria-expanded="false" class="col-sm-12" href="#service" data-toggle="tab">
+							<span class="text-nowrap">案例•服务</span>
+						</a>
+					</li>
+					<li id="menu-gebaude" class="tab col-sm-2">
+						<a class="col-sm-12" href="#smart" data-toggle="tab">
+							<span>智能</span>
+						</a>
+					</li>
+					<li id="menu-sapientia" class="tab col-sm-2">
+						<a class="col-sm-12" href="#green" data-toggle="tab">
+							<span>绿色</span>
+						</a>
+					</li>
+					<li id="menu-mimose" class="tab col-sm-2">
+						<a aria-expanded="false" class="col-sm-12" href="#art" data-toggle="tab">
+							<span>艺术</span>
+						</a>
+					</li>
+				</ul>
+				<div class="row">
+					<div id="underline" class="col-sm-2" style="left:135px"></div>
+				</div>
+			</div>
+		</div>
+		<div id="content" class="row">
+			<div class="tab-content">
+				<div id="intro" class="pane tab-pane fade active in">
+					<div class="link-group col-sm-2">
+						<ul>
+							<li class="group-item active">
+								<a aria-expanded="false" href="#company-intro" data-toggle="tab">公司介绍</a>
+							</li>
+							<li class="group-item">
+								<a aria-expanded="true" href="#contact-us" data-toggle="tab">联系我们</a>
+							</li>
+							<li class="group-item">
+								<a aria-expanded="true" href="#customer-service" data-toggle="tab">在线客服</a>
+							</li>
+							<li class="group-item">
+								<a aria-expanded="true" href="#customer-list" data-toggle="tab">服务企业</a>
+							</li>
+							<li class="group-item">
+								<a href="#designer-team">设计团队</a>
+							</li>
+						</ul>
+					</div>
+					<div class="tab-content col-sm-10">
+						<div id="company-intro" class="tab-pane fade pane-content active in">
+							<h1>公司介绍</h1>
+							<h2>Intro.</h2>
+							<p>G.S.M（佳士蒙中国），艺术（Gebaude）、智能（Gebaude）、绿色（Mimose）多维空间缔造者。</p>
+							<p>作为设计装饰，家具配套，软装配饰的整合服务提供者，G.S.M自1999年创立以来，矢志成为绿色与智能环境艺术的先行者，在办公空间，酒店会所乃至别墅豪宅等不同领域将G.S.M主张充分诠释与践行。</p>
+							<p>以国际顶尖设计团队为先导，以依托全球采买资源为依托，以资深工程团队为后盾，专注打造艺术、智能、绿色的国际化空间；以客户需求为导向，G.S.M致力于提供打造包括硬装设计、软装配套在内的一站式多链条专业服务。</p>
+							<h2>Value</h2>
+							<samp>“佳诚为先，士信续远，蒙发不息”——创新、传承、凝聚人文、超越期望</samp>
+						</div>
+						<div id="contact-us" class="tab-pane fade pane-content">
+							<h1>联系我们</h1>
+							<p>佳士蒙中国<br>
+							G.S.M (China) Co., Ltd.
+							</p>
+							<p><span>地址：</span><br>
+							中国北京 温榆河西路 金融街园中园 6号院-19号楼
+							邮编：101100<br>
+							Block 19, Court 6, Financial Street Business Garden, Wenyuhe West Road, Peking, China. 101100</p>
+							<p>
+							<span>市场媒介</span><br>
+							<span>电话：</span>8610-60596809<br>
+							<span>邮件：</span>gam@gsm.com
+							</p>
+							<p>
+							<span>客户服务</span><br>
+							<span>电话：</span>8610-60596809<br>
+							<span>邮件：</span>gam@gsm.com
+							</p>
+							<!--p>
+							<span>人力资源</span><br />
+							<span>电话：</span>8610-60596809<br />
+							<span>邮件：</span>gam@gsm.com
+							</p-->
+						</div>
+						<div id="customer-service" class="tab-pane fade pane-content">
+							<div class="row">
+								<form id="cs-form" class="col-sm-10 col-lg-7"><!-- col-sm-offset-2 col-lg-offset-3"-->
+									<h1>在线客服</h1>
+									<br>
+									<div class="row">
+										<div class="col-sm-6">
+											<div class="dropdown cs-selectbox">
+												<div data-toggle="dropdown">
+													<span class="selected fa-1x">项目类型</span> <i class="fa fa-angle-down pull-right"></i>
+												</div>
+												<ul class="dropdown-menu">
+													<li><a value="business">商业空间</a></li>
+													<li><a value="hotel">酒店会所</a></li>
+													<li><a value="house">顶级豪宅</a></li>
+												</ul>
+											</div>
+											<input name="type" id="type" type="hidden">
+										</div>
+										<div class="col-sm-6">
+											<div class="dropdown cs-selectbox">
+												<div data-toggle="dropdown">
+													<span class="selected fa-1x">项目需求</span> <i class="fa fa-angle-down pull-right"></i>
+												</div>
+												<ul class="dropdown-menu">
+													<li><a value="design">装饰设计</a></li>
+													<li><a value="project">装饰工程</a></li>
+													<li><a value="decoration">软装配饰</a></li>
+												</ul>
+											</div>
+											<input name="require" id="require" type="hidden">
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-sm-12">
+											<textarea rows="4" id="cs-detail" class="cs-input" name="detail"></textarea>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-sm-12">
+											<span>称呼：</span>
+											<input id="name" name="name" class="cs-input" type="text">
+											<input name="sex" value="male" class="cs-radio" type="radio"><span>先生</span>
+											<input name="sex" value="female" class="cs-radio" type="radio"><span>女士</span>
+											<!--span>称谓：</span>
+											<input type="text" id="title" name="title" class="cs-input"/-->
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-sm-10">
+											<span>联系方式：</span>
+											<input id="contact" name="contact" class="cs-input" type="text">
+										</div>
+									</div>
+									<br>
+									<div class="row">
+										<div class="col-sm-10 col-sm-offset-1 clearline"></div>
+									</div>
+									<br>
+									<div class="row">
+										<div class="col-sm-10">
+											<input value="提交" id="submit" type="submit">
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+						<div id="customer-list" class="tab-pane fade pane-content">
+							<div id="customer-carousel" class="pane-carousel carousel slide" data-ride="carousel">
+								<!-- Wrapper for slides -->
+								<div class="carousel-inner" role="listbox">
+									<div class="item active text-center">
+										<img src="#" alt="图片未加载">
+										<div class="carousel-caption">
+										</div>
+									</div>
+									<div class="item text-center">
+										<img src="#" alt="图片未加载">
+										<div class="carousel-caption">
+										</div>
+									</div>
+								</div>
+
+								<!-- Controls -->
+								<a class="left carousel-control" href="#customer-carousel" role="button" data-slide="prev">
+									<i class="fa fa-angle-left icon-prev"></i>
+									<span class="sr-only">Previous</span>
+								</a>
+								<a class="right carousel-control" href="#customer-carousel" role="button" data-slide="next">
+									<i class="fa fa-angle-right icon-next"></i>
+									<span class="sr-only">Next</span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>  
+				<div id="green" class="pane tab-pane fade">
+					<div class="link-group col-sm-2">
+						<ul>
+							<li class="group-item active">
+								<a href="#green-decoration" data-toggle="tab">绿色装修</a>
+							</li>
+							<li class="group-item ">
+								<a href="#green-corp" data-toggle="tab">绿色材料</a>
+							</li>
+							<li class="group-item">
+								<a href="#green-smart" data-toggle="tab">智慧环保</a>
+							</li>
+						</ul>
+					</div>
+					<div class="tab-content col-sm-10">
+						<div id="green-decoration" class="tab-pane fade in active pane-content">
+							<ol>
+								<br>
+								<samp>人性的设计+高品质的材料+创新的技术+科学的施工工艺=绿色装修</samp>
+								<p><span>绿色装修是整体概念，而材料本身的环保只是其中一个重要的环节。绿色装修的实现需要设计、材料选择、创新技术、施工工艺等多方面的共同配合。</span></p>
+								<br class="hidden-md">
+								<li>人性化的设计</li>
+								<p><span>设计要充分考量空间、色彩、光源，材料等多个要素，譬如所选的材料是否环保、用量是否合理、室内是否存在空气流通死角、是否会出现光污染等，使用的合理和便捷是绿色设计的基础。G.S.M设计团队在绿色设计经验积累上，已被众多优质案例所论证。</span></p>
+								<br class="hidden-md">
+								<li>高品质的材料</li>
+								<p><span>材料环保是绿色空间的基础。G.S.M 选用材料皆为严格获得检验和论证的国际国内知名品牌。</span></p>
+								<br class="hidden-md">
+								<li>创新的技术</li>
+								<p><span>G.S.M非常注重新技术在装修材料及工艺领域的应用，比如光触媒技术，无醛MDI技术等。</span></p>
+								<br class="hidden-md">
+								<li>科学的施工工艺</li>
+								<p><span>施工是环保的重要控制环节，施工工艺的科学性乃至施工人员的专业素养都对工程最终成果有重要的影响。</span></p>
+							</ol>
+						</div>
+						<div id="green-smart" class="tab-pane fade pane-content">
+							<div class="row">
+								<div class="col-sm-12">
+									<h1>智慧环保</h1>
+									<p>智慧环保是互联网技术与环境信息化相结合的概念。借助物联网技术，把感应器和装备嵌入到各种环境监控对象，通过超级计算机和云计算将环保领域物联网整合起来，以更加精细和动态的方式实现环境管理和决策的智慧。特别在空气净化，水质净化，节能减排，温湿控制等领域应用成效显著。</p>
+								</div>
+							</div>
+							<div class="clearline"></div>
+							<div class="row">
+								<div class="picture-box col-sm-3">
+									<div class="border">
+										<a href="#business-environment" data-toggle="tab">
+											<img src="img/gs-1.jpg">
+											<div class="text">Smart rendering</div>
+										</a>
+									</div>
+								</div>
+								<div class="picture-box col-sm-3">
+									<div class="border">
+										<a href="#home-environment" data-toggle="tab">
+											<img src="img/gs-1.jpg">
+											<div class="text">Smart rendering</div>
+										</a>
+									</div>
+								</div>
+								<div class="picture-box col-sm-3">
+									<div class="border">
+										<a href="#business-environment" data-toggle="tab">
+											<img src="img/gs-1.jpg">
+											<div class="text">Smart rendering</div>
+										</a>
+									</div>
+								</div>
+								<div class="picture-box col-sm-3">
+									<div class="border">
+										<a href="#home-environment" data-toggle="tab">
+											<img src="img/gs-1.jpg">
+											<div class="text">Smart rendering</div>
+										</a>
+									</div>
+								</div>
+							</div>
+							<button class="pull-right">详细智慧环保</button>
+						</div>
+						<div id="green-corp" class="tab-pane fade pane-content">
+							<div id="corp-carousel" class="pane-carousel carousel slide" data-ride="carousel">
+								<!-- Wrapper for slides -->
+								<div class="carousel-inner" role="listbox">
+									<div class="item active">
+										<div class="carousel-caption">
+											<div class="row">
+												<div class="col-sm-3">
+													<div class="corp-brand"><img src="img/green/basf.jpg"></div>
+												</div>
+												<div class="col-sm-9">
+													<h3>巴斯夫（BASF）</h3>
+													<p>巴斯夫是全球最大的化工公司，被美国商业杂志《财富》评为“全球最受赞赏化工公司”。巴斯夫的业务主要以化学品及塑料为核心，面向绿色材料，巴斯夫出品的装饰性涂料、泡沫填充物、板材粘合剂系统以及面向木制品漆的粘合剂尤其重视安全与环境保护，成为顶级装饰工程的首选。</p>
+												</div>
+											</div>
+											<div class="row">
+												<div class="clearline"></div>
+												<div class="col-sm-12 p-botton"><h2>产品展示</h2></div>
+
+												<div class="picture-box col-sm-3">
+													<div class="border no-action">
+														<img src="img/basf-2.jpg">
+														<div class="text">Kauropal® 粘合剂</div>
+													</div>
+												</div>
+												<div class="picture-box col-sm-3">
+													<div class="border no-action">
+														<img src="img/basf-2.jpg">
+														<div class="text">Suvinil® 墙壁涂料</div>
+													</div>
+												</div>
+												<div class="picture-box col-sm-3">
+													<div class="border no-action">
+														<img src="img/basf-2.jpg">
+														<div class="text">Microlith® 颜料</div>
+													</div>
+												</div>
+												<div class="picture-box col-sm-3">
+													<div class="border no-action">
+														<img src="img/basf-2.jpg">
+														<div class="text">CosyPUR® 泡沫</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="item">
+										<div class="carousel-caption">
+											<div class="row">
+												<div class="col-sm-3">
+													<div class="corp-brand"><img src="img/green/GSM.jpg"></div>
+												</div>
+												<div class="col-sm-9">
+													<h3>G.S.M 3D 吸音体（3D Cubic Panels）</h3>
+													<p>繁华都市中噪音是影响健康的重要污染源之一，G.S.M自有产品——3D 吸音体，可以有效的降低工作、生活环境噪音，尤其在需要声处理的环境中，能够最大程度的改善并提高听觉效果。产品集吸声，保温，防火功能于一体，顺应环保节能的发展趋势，多用于背景墙、视听室、酒店、会所、多功能厅、会议室、体育馆、别墅等。</p>
+												</div>
+											</div>
+											<div class="row">
+												<div class="clearline"></div>
+												<div class="col-sm-12 p-botton"><h2>产品展示</h2></div>
+
+												<div class="picture-box col-sm-3">
+													<div class="border no-action">
+														<img src="img/basf-2.jpg">
+														<div class="text">3D吸音-古树</div>
+													</div>
+												</div>
+												<div class="picture-box col-sm-3">
+													<div class="border no-action">
+														<img src="img/basf-2.jpg">
+														<div class="text">3D吸音-陨石</div>
+													</div>
+												</div>
+												<div class="picture-box col-sm-3">
+													<div class="border no-action">
+														<img src="img/basf-2.jpg">
+														<div class="text">3D吸音-水立方</div>
+													</div>
+												</div>
+												<div class="picture-box col-sm-3">
+													<div class="border no-action">
+														<img src="img/basf-2.jpg">
+														<div class="text">3D吸音-键盘</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- Controls -->
+								<a class="left carousel-control" href="#corp-carousel" role="button" data-slide="prev">
+									<i class="fa fa-angle-left icon-prev"></i>
+									<span class="sr-only">Previous</span>
+								</a>
+								<a class="right carousel-control" href="#corp-carousel" role="button" data-slide="next">
+									<i class="fa fa-angle-right icon-next"></i>
+									<span class="sr-only">Next</span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+		<div id="footer" class="row">
+			<div id="social-icons" class="col-md-3 col-sm-2 text-nowrap">
+				<a class="social-icon fa fa-weibo" href="#"></a>
+				<a class="social-icon fa fa-weixin" href="#"></a>
+				<a class="social-icon fa fa-qq" href="#"></a>
+				<a class="social-icon fa fa-tencent-weibo" href="#"></a>
+			</div>
+			<div id="ft-lnks" class="col-md-8 col-md-offset-1 col-sm-10">
+				<div class="row">
+					<a id="link-intro" class="link" href="#company-intro">公司介绍</a>
+					<a id="link-contact-us" class="link" href="#contact-us">联系我们</a>
+					<a id="link-service" class="link" href="#service">提供服务</a>
+					<a class="link" href="#">项目追踪</a>
+					<a title="" data-original-title="" class="link" href="#" data-toggle="popover">微信公众号</a>
+					<a class="link" href="#">G.S.M 邮件</a>
+				</div>
+			</div>
+			<div id="copyright" class="col-sm-6 col-sm-offset-6">版权所有 ©2000-2016 G.S.M（北京）有限公司</div>
+		</div>
+	</div>
+
+<!-- jQuery -->
+<script src="js/jquery-1.11.3.js"></script>
+
+<!-- Bootstrap JavaScript -->
+<script src="js/bootstrap.js"></script>
+
+<!-- custom js
+<script src="js/请输入.js"></script>-->
+
+<script type="text/javascript">
+
+</script>
+</body>
+</html>
